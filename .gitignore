@@ -1,0 +1,11 @@
+Derived_Data/*.csv
+.local/*
+.rstudio/*
+Rplots.pdf*
+.config/*
+.gitconfig/*
+.bash_history
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
