@@ -32,23 +32,23 @@ Glossary
 --------
 
 #### To dinstinguish between play types:
-rush_attempt = 1 0r 0
-pass_attempt = 1 or 0
-(both 0) = kick, or sack
-play_type: NA, kickoff, pass, run, punt, field_goal, extra_point, no_play, qb_spike, qb_kneel
+rush_attempt = 1 0r 0 <br />
+pass_attempt = 1 or 0 <br />
+(both 0) = kick, or sack <br />
+play_type: NA, kickoff, pass, run, punt, field_goal, extra_point, no_play, qb_spike, qb_kneel <br />
 
 #### Game distinction:
-game_id : year_month_Awayteam_Hometeam ex: 2010_01_ARI_SF
-home_team: Abbreviation of home team
-away_team: Abbrevation of away team
-season_type: REG or POST
+game_id : year_month_Awayteam_Hometeam ex: 2010_01_ARI_SF <br />
+home_team: Abbreviation of home team <br />
+away_team: Abbrevation of away team <br />
+season_type: REG or POST <br />
 
 #### For game situation:
-game_seconds_remaining = 0:3600
-half_seconds_remaining = 0:1800
-quarter_seconds_remaining = 0:900
-home_timeouts_remaining = 0:3
-away_timeouts_remaining = 0:3
+game_seconds_remaining = 0:3600 <br />
+half_seconds_remaining = 0:1800 <br />
+quarter_seconds_remaining = 0:900 <br />
+home_timeouts_remaining = 0:3 <br />
+away_timeouts_remaining = 0:3 <br />
 yrdln = home_team (or away_team) numerical value for yardline
 ydstogo = number of yards for a first down or touchdown
 total_home_score = 0:99
