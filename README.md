@@ -60,7 +60,7 @@ timeout = binary <br />
 home_timeouts_remaining = 0:3 <br />
 away_timeouts_remaining = 0:3 <br />
 
-####For play description:
+#### For play description:
 shotgun = binary <br />
 no_huddle = binary <br />
 qb_dropback = binary <br />
@@ -68,24 +68,24 @@ qb_kneel = binary <br />
 qb_spike = binary <br />
 qb_scramble = binary <br />
 
-####For pass plays:
+#### For pass plays:
 pass_length = NA, short, deep <br />
 air_yards = NA, yards the ball traveled <br />
 yards_after_catch <br />
 
-####For run plays:
+#### For run plays:
 run_location = NA, left, right, middle <br />
 run_gap = NA, tackle, end, guard <br />
 
-####For kicks: 
+#### For kicks: 
 field_goal_result = NA, made, missed, blocked <br />
 kick_distance = yards of kick or punt <br />
 
-####For other plays:
+#### For other plays:
 extra_point_result = NA, good, failed, blocked <br />
 two_point_conv_result = NA, success, failure <br />
 
-####Probabilities:
+#### Probabilities:
 ep = expected points <br />
 no_score_prob = probability of no more scoring this half <br />
 opp_fg_prob= probability next score opponent field goal this half <br />
