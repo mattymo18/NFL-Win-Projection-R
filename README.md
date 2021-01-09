@@ -49,50 +49,52 @@ half_seconds_remaining = 0:1800 <br />
 quarter_seconds_remaining = 0:900 <br />
 home_timeouts_remaining = 0:3 <br />
 away_timeouts_remaining = 0:3 <br />
-yrdln = home_team (or away_team) numerical value for yardline
-ydstogo = number of yards for a first down or touchdown
-total_home_score = 0:99
-total_away_score = 0:99
+yrdln = home_team (or away_team) numerical value for yardline <br />
+ydstogo = number of yards for a first down or touchdown <br />
+total_home_score = 0:99 <br />
+total_away_score = 0:99 <br />
 
 #### Timeouts:
-timeout_team = home_team (or away_team)
-timeout = binary
-home_timeouts_remaining = 0:3
-away_timeouts_remaining = 0:3
+timeout_team = home_team (or away_team) <br />
+timeout = binary <br />
+home_timeouts_remaining = 0:3 <br />
+away_timeouts_remaining = 0:3 <br />
 
 ####For play description:
-shotgun = binary
-no_huddle = binary
-qb_dropback = binary
-qb_kneel = binary
-qb_spike = binary
-qb_scramble = binary
+shotgun = binary <br />
+no_huddle = binary <br />
+qb_dropback = binary <br />
+qb_kneel = binary <br />
+qb_spike = binary <br />
+qb_scramble = binary <br />
 
 ####For pass plays:
-pass_length = NA, short, deep
-air_yards = NA, yards the ball traveled
-yards_after_catch
+pass_length = NA, short, deep <br />
+air_yards = NA, yards the ball traveled <br />
+yards_after_catch <br />
 
 ####For run plays:
-run_location = NA, left, right, middle
-run_gap = NA, tackle, end, guard
+run_location = NA, left, right, middle <br />
+run_gap = NA, tackle, end, guard <br />
 
 ####For kicks: 
-field_goal_result = NA, made, missed, blocked
-kick_distance = yards of kick for punts, 
+field_goal_result = NA, made, missed, blocked <br />
+kick_distance = yards of kick or punt <br />
 
 ####For other plays:
-extra_point_result = NA, good, failed, blocked
-two_point_conv_result = NA, success, failure
+extra_point_result = NA, good, failed, blocked <br />
+two_point_conv_result = NA, success, failure <br />
 
 ####Probabilities:
-ep = expected points.
-no_score_prob = probability of no more scoring this half. 
-opp_fg_prob= probability next score opponent field goal this half. 
-opp_safety_prob = probability next score opponent safety this half. 
-opp_td_prob = probability of next score opponent touchdown this half. 
-fg_prob = probability next score field goal this half.
-safety_prob = probability next score safety this half.
-td_prob = probability text score touchdown this half.
+ep = expected points <br />
+no_score_prob = probability of no more scoring this half <br />
+opp_fg_prob= probability next score opponent field goal this half <br />
+opp_safety_prob = probability next score opponent safety this half <br />
+opp_td_prob = probability of next score opponent touchdown this half <br />
+fg_prob = probability next score field goal this half <br />
+safety_prob = probability next score safety this half <br />
+td_prob = probability text score touchdown this half <br />
+
+##### All Binaries: 1 = True, 0 = False
 
 
