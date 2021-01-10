@@ -99,7 +99,6 @@ two_point_conversion_prob = probability next score 2-pt conversion this half <br
 
 #### Expected Values:
 ep = expected points <br />
-###### ep calculation from formulation here: https://www.advancedfootballanalytics.com/index.php/home/stats/stats-explained/expected-points-and-epa-explained <br />
 epa = Calculated by subtracting ep of current spot by ep of previous spot at the beginning of each play <br />
 total_home_epa = aggregate of home team's epa <br />
 total_away_epa = aggregate of away team's epa <br />
@@ -116,5 +115,6 @@ xyac_mean_yardage = Average expected yards after the catch based on where the ba
 xyac_median_yardage Median expected yards after the catch base donw here the ball was caught <br />
 
 ##### All Binaries: 1 = True, 0 = False
+##### ep calculation from formulation here: https://www.advancedfootballanalytics.com/index.php/home/stats/stats-explained/expected-points-and-epa-explained <br />
 
 
