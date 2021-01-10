@@ -139,6 +139,6 @@ xyac_mean_yardage = average expected yards after the catch based on where the ba
 xyac_median_yardage median expected yards after the catch base donw here the ball was caught <br />
 
 ##### All Binaries: 1 = True, 0 = False
-##### ep calculation from formulation [here:] (https://www.advancedfootballanalytics.com/index.php/home/stats/stats-explained/expected-points-and-epa-explained) <br />
+##### ep calculation from formulation [Here] (https://www.advancedfootballanalytics.com/index.php/home/stats/stats-explained/expected-points-and-epa-explained)
 
 
