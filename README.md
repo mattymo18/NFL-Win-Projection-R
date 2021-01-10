@@ -30,7 +30,7 @@ Introduction
 
 This project contains NFLFastR data scraping and modeling for win projection. 
 
-Guide to nflfastR can be found here: https://cran.r-project.org/web/packages/nflfastR/readme/README.html
+Guide to nflfastR can be found [Here](https://cran.r-project.org/web/packages/nflfastR/readme/README.html)
 
 ***
 
