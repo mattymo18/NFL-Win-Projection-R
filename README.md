@@ -38,7 +38,7 @@ Glossary
 --------
 
 #### To dinstinguish between play types:
-rush_attempt = 1 0r 0 <br />
+rush_attempt = 1 or 0 <br />
 pass_attempt = 1 or 0 <br />
 (both 0) = kick, or sack <br />
 play_type: NA, kickoff, pass, run, punt, field_goal, extra_point, no_play, qb_spike, qb_kneel <br />
@@ -87,7 +87,7 @@ qb_scramble = binary <br />
 #### For pass plays:
 pass_length = NA, short, deep <br />
 air_yards = NA, yards the ball traveled <br />
-yards_after_catch <br />
+yards_after_catch = yards gained between time of catch and time of tackle or score <br />
 
 ***
 
@@ -139,6 +139,6 @@ xyac_mean_yardage = average expected yards after the catch based on where the ba
 xyac_median_yardage median expected yards after the catch base donw here the ball was caught <br />
 
 ##### All Binaries: 1 = True, 0 = False
-##### ep calculation from formulation here: https://www.advancedfootballanalytics.com/index.php/home/stats/stats-explained/expected-points-and-epa-explained <br />
+##### ep calculation from formulation [here:] (https://www.advancedfootballanalytics.com/index.php/home/stats/stats-explained/expected-points-and-epa-explained) <br />
 
 
