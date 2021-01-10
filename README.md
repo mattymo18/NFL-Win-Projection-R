@@ -86,14 +86,34 @@ extra_point_result = NA, good, failed, blocked <br />
 two_point_conv_result = NA, success, failure <br />
 
 #### Probabilities:
-ep = expected points <br />
 no_score_prob = probability of no more scoring this half <br />
 opp_fg_prob= probability next score opponent field goal this half <br />
 opp_safety_prob = probability next score opponent safety this half <br />
 opp_td_prob = probability of next score opponent touchdown this half <br />
 fg_prob = probability next score field goal this half <br />
 safety_prob = probability next score safety this half <br />
-td_prob = probability text score touchdown this half <br />
+td_prob = probability next score touchdown this half <br />
+extra_point_prob = probability next score extra point this half <br />
+two_point_conversion_prob = probability next score 2-pt conversion this half <br />
+
+
+#### Expected Values:
+ep = expected points <br />
+###### ep calculation from formulation here: https://www.advancedfootballanalytics.com/index.php/home/stats/stats-explained/expected-points-and-epa-explained <br />
+epa = Calculated by subtracting ep of current spot by ep of previous spot at the beginning of each play <br />
+total_home_epa = aggregate of home team's epa <br />
+total_away_epa = aggregate of away team's epa <br />
+total_home_rush_epa = aggregate of home team's epa on rushing plays <br />
+total_away_rush_epa = aggregate of away team's epa on rushing plays <br />
+total_home_pass_epa = aggregate of home team's epa on passing plays <br />
+total_away_pass_epa = aggregate of away team's epa on passing plays <br />
+air_epa = epa on pass plays = <br />
+***
+xyac_epa = expected value of EPA gained after the catch, starting from where the catch was made. Zero yards after the catch would be listed as zero EPA <br />
+xyac_success = Probability play earns positive EPA (relative to where play started) based on where ball was caught <br />
+xyac_fd= Probability play earns a first down based on where the ball was caught <br />
+xyac_mean_yardage = Average expected yards after the catch based on where the ball was caught <br />
+xyac_median_yardage Median expected yards after the catch base donw here the ball was caught <br />
 
 ##### All Binaries: 1 = True, 0 = False
 
