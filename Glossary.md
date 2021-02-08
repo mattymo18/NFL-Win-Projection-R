@@ -128,12 +128,12 @@ rusher_player_name = name of the rusher <br />
 ***
 
 #### Betting
-result = spread final_home_score - final_away_score
-total = final_home_score + final_away_score
-spread_line = vegas spread
-total_line = vegas total
+result = spread final_home_score - final_away_score <br />
+total = final_home_score + final_away_score <br />
+spread_line = vegas spread <br />
+total_line = vegas total <br />
 
-
+***
 
 ##### All Binaries: 1 = True, 0 = False
 ##### Tons of other variables we will not consider
