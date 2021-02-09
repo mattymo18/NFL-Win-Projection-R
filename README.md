@@ -5,11 +5,11 @@ You'll need Docker and the ability to run Docker as your current user
 
 Build the container:
 
-    > docker build . -t NFL_Gamble
+    > docker build . -t nfl_gamble
     
 This Docker container is based on rocker/verse. To run rstudio server:
 
-    > docker run -v `pwd`:/home/rstudio -p 8765:8765 -e PASSWORD=mypass -t NFL_Gamble
+    > docker run -v `pwd`:/home/rstudio -p 8765:8765 -e PASSWORD=mypass -t nfl_gamble
     
 Then connect to the machine on port 8765.
 

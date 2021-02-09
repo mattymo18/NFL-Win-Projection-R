@@ -8,15 +8,19 @@ library(tidyverse)
 ## Load in Data ##
 seasons <- 2015:2019
 pbp15.19 <- purrr::map_df(seasons, function(x) {
-  readr::read_csv(
-    glue::glue("https://raw.githubusercontent.com/guga31bb/nflfastR-data/master/data/play_by_play_{x}.csv.gz")
+  readRDS(
+    url(
+      glue::glue("https://raw.githubusercontent.com/guga31bb/nflfastR-data/master/data/play_by_play_{x}.rds")
+    )
   )
 })
 
 seasons <- 2020
 pbp20 <- purrr::map_df(seasons, function(x) {
-  readr::read_csv(
-    glue::glue("https://raw.githubusercontent.com/guga31bb/nflfastR-data/master/data/play_by_play_{x}.csv.gz")
+  readRDS(
+    url(
+      glue::glue("https://raw.githubusercontent.com/guga31bb/nflfastR-data/master/data/play_by_play_{x}.rds")
+    )
   )
 })
 

@@ -1,4 +1,4 @@
-FROM rocker/verse
+FROM rocker/verse:latest
 MAINTAINER Matt Johnson <Johnson.Matt1818@gmail.com>
 RUN R -e "install.packages('caret')"
 RUN R -e "install.packages('cluster')"
