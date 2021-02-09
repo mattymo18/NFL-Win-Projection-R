@@ -9,7 +9,7 @@ Build the container:
     
 This Docker container is based on rocker/verse. To run rstudio server:
 
-    > docker run -v `pwd`:/home/rstudio -p 8765:8765 -e PASSWORD=mypass -t nfl_gamble
+    > docker run -v `pwd`:/home/rstudio -p 8787:8787 -e PASSWORD=mypass -t nfl_gamble
     
 Then connect to the machine on port 8765.
 
