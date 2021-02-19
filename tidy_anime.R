@@ -317,4 +317,4 @@ anim <- DF.Final.Anime %>%
 
 
 animate(anim, 320, fps = 20,  width = 1200, height = 1000, 
-        renderer = gifski_renderer("Derived_Graphics/Forced.Fumbles.2020.gif"))
+        renderer = gifski_renderer("README_Grpahics/Forced.Fumbles.2020.gif"))
