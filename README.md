@@ -37,4 +37,5 @@ Guide to nflfastR can be found [Here](https://cran.r-project.org/web/packages/nf
 Introductory Plots
 ------------------
 
+
 ![](Derived_Graphics/Forced.Fumbles.2020.gif)
