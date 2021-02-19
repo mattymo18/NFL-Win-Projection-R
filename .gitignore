@@ -1,4 +1,6 @@
 Derived_Data/*.csv
+Derived_Graphics/*.png
+Derived_Graphics/*.gif
 .local/*
 .rstudio/*
 Rplots.pdf*
@@ -11,5 +13,3 @@ Rplots.pdf*
 .Ruserdata
 Scratch_Work.Rmd
 Scratch_Work_Anime.Rmd
-Derived_Graphics/*.png
-Derived_Graphics/*.gif
