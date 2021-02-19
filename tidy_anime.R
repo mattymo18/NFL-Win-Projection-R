@@ -26,7 +26,7 @@ pbp20 <- purrr::map_df(seasons, function(x) {
   )
 })
 
-DF <- rbind(pbp15.19, pbp2020)
+DF <- rbind(pbp15.19, pbp20)
 
 ##### Cleaning #####
 DF1 <- DF %>% 
@@ -38,7 +38,6 @@ DF1 <- DF %>%
   group_by(week, Name) %>% 
   summarise(Count = n()) %>% 
   arrange(week)
-DF1
 
 DF.Final <- DF1 %>% 
   select(week, Name, Count)
@@ -57,8 +56,7 @@ FF0.re <- data.frame("week" = 0,
 
 ######## Week 1 #########
 FF1 <- Frcd.Fumb.Peop %>% 
-  filter(week == 1) %>% 
-  select(-X)
+  filter(week == 1)
 
 FF1.re <- left_join(data.frame("week" = 1,
                                "Name" = unique(Frcd.Fumb.Peop$Name)), FF1)
@@ -67,8 +65,7 @@ FF1.re[is.na(FF1.re)] <- 0
 
 ######## Week 2 #########
 FF2 <- Frcd.Fumb.Peop %>% 
-  filter(week == 2) %>% 
-  select(-X)
+  filter(week == 2)
 
 FF1.Copy <- FF1.re
 FF1.Copy$week <- 2 #ok we are going to use this and add the vectors as we go to get the aggregate for the right week
@@ -83,8 +80,7 @@ FF2.re$Count <- FF2.re$Count + FF1.re$Count
 
 ######## Week 3 #########
 FF3 <- Frcd.Fumb.Peop %>% 
-  filter(week == 3) %>% 
-  select(-X)
+  filter(week == 3)
 
 FF2.Copy <- FF2.re
 FF2.Copy$week <- 3 #ok we are going to use this and add the vectors as we go to get the aggregate for the right week
@@ -97,8 +93,7 @@ FF3.re$Count <- FF3.re$Count + FF2.re$Count
 
 ######## Week 4 #########
 FF4 <- Frcd.Fumb.Peop %>% 
-  filter(week == 4) %>% 
-  select(-X)
+  filter(week == 4)
 
 FF3.Copy <- FF3.re
 FF3.Copy$week <- 4 
@@ -111,8 +106,7 @@ FF4.re$Count <- FF4.re$Count + FF3.re$Count
 
 ######## Week 5 #########
 FF5 <- Frcd.Fumb.Peop %>% 
-  filter(week == 5) %>% 
-  select(-X)
+  filter(week == 5)
 
 FF4.Copy <- FF4.re
 FF4.Copy$week <- 5 
@@ -125,8 +119,7 @@ FF5.re$Count <- FF5.re$Count + FF4.re$Count
 
 ######## Week 6 #########
 FF6 <- Frcd.Fumb.Peop %>% 
-  filter(week == 6) %>% 
-  select(-X)
+  filter(week == 6)
 
 FF5.Copy <- FF5.re
 FF5.Copy$week <- 6 
@@ -139,8 +132,7 @@ FF6.re$Count <- FF6.re$Count + FF5.re$Count
 
 ######## Week 7 #########
 FF7 <- Frcd.Fumb.Peop %>% 
-  filter(week == 7) %>% 
-  select(-X)
+  filter(week == 7)
 
 FF6.Copy <- FF6.re
 FF6.Copy$week <- 7 
@@ -153,8 +145,7 @@ FF7.re$Count <- FF7.re$Count + FF6.re$Count
 
 ######## Week 8 #########
 FF8 <- Frcd.Fumb.Peop %>% 
-  filter(week == 8) %>% 
-  select(-X)
+  filter(week == 8)
 
 FF7.Copy <- FF7.re
 FF7.Copy$week <- 8 
@@ -167,8 +158,7 @@ FF8.re$Count <- FF8.re$Count + FF7.re$Count
 
 ######## Week 9 #########
 FF9 <- Frcd.Fumb.Peop %>% 
-  filter(week == 9) %>% 
-  select(-X)
+  filter(week == 9)
 
 FF8.Copy <- FF8.re
 FF8.Copy$week <- 9 
@@ -181,8 +171,7 @@ FF9.re$Count <- FF9.re$Count + FF8.re$Count
 
 ######## Week 10 #########
 FF10 <- Frcd.Fumb.Peop %>% 
-  filter(week == 10) %>% 
-  select(-X)
+  filter(week == 10)
 
 FF9.Copy <- FF9.re
 FF9.Copy$week <- 10 
@@ -195,8 +184,7 @@ FF10.re$Count <- FF10.re$Count + FF9.re$Count
 
 ######## Week 11 #########
 FF11 <- Frcd.Fumb.Peop %>% 
-  filter(week == 11) %>% 
-  select(-X)
+  filter(week == 11)
 
 FF10.Copy <- FF10.re
 FF10.Copy$week <- 11 
@@ -209,8 +197,7 @@ FF11.re$Count <- FF11.re$Count + FF10.re$Count
 
 ######## Week 12 #########
 FF12 <- Frcd.Fumb.Peop %>% 
-  filter(week == 12) %>% 
-  select(-X)
+  filter(week == 12)
 
 FF11.Copy <- FF11.re
 FF11.Copy$week <- 12 
@@ -223,8 +210,7 @@ FF12.re$Count <- FF12.re$Count + FF11.re$Count
 
 ######## Week 13 #########
 FF13 <- Frcd.Fumb.Peop %>% 
-  filter(week == 13) %>% 
-  select(-X)
+  filter(week == 13)
 
 FF12.Copy <- FF12.re
 FF12.Copy$week <- 13 
@@ -237,8 +223,7 @@ FF13.re$Count <- FF13.re$Count + FF12.re$Count
 
 ######## Week 14 #########
 FF14 <- Frcd.Fumb.Peop %>% 
-  filter(week == 14) %>% 
-  select(-X)
+  filter(week == 14)
 
 FF13.Copy <- FF13.re
 FF13.Copy$week <- 14 
@@ -251,8 +236,7 @@ FF14.re$Count <- FF14.re$Count + FF13.re$Count
 
 ######## Week 15 #########
 FF15 <- Frcd.Fumb.Peop %>% 
-  filter(week == 15) %>% 
-  select(-X)
+  filter(week == 15)
 
 FF14.Copy <- FF14.re
 FF14.Copy$week <- 15 
@@ -265,8 +249,7 @@ FF15.re$Count <- FF15.re$Count + FF14.re$Count
 
 ######## Week 16 #########
 FF16 <- Frcd.Fumb.Peop %>% 
-  filter(week == 16) %>% 
-  select(-X)
+  filter(week == 16)
 
 FF15.Copy <- FF15.re
 FF15.Copy$week <- 16 
