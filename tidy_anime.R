@@ -26,6 +26,8 @@ pbp20 <- purrr::map_df(seasons, function(x) {
   )
 })
 
+DF <- rbind(pbp15.19, pbp2020)
+
 ##### Cleaning #####
 DF1 <- DF %>% 
   separate(game_date, sep = "-", into = c("Year", "Month", "Day.Date")) %>% 
