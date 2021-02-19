@@ -21,7 +21,7 @@ Use Makefile as recipe book for building artifacts found in derived directories.
 ##### Example:
 In local project directory, to build artifact
 
-    > make Derived_Data/Example.csv
+    > make Derived_Data/NFL.Clean.Cols.csv
     
 ***
 
@@ -34,4 +34,7 @@ Guide to nflfastR can be found [Here](https://cran.r-project.org/web/packages/nf
 
 ***
 
+Introductory Plots
+------------------
 
+![](Derived_Graphics/Forced.Fumbles.2020.gif)
