@@ -44,7 +44,7 @@ DF.Final <- DF1 %>%
 
 #this removes postseason and the people that only had one week with a forced fumble, this will give us some more movement.
 Frcd.Fumb.Peop <- DF.Final %>% 
-  filter(week <= 16) %>% 
+  filter(week <= 17) %>% 
   group_by(Name) %>% 
   filter(n() > 2)
 
@@ -260,9 +260,22 @@ FF16.re[is.na(FF16.re)] <- 0
 
 FF16.re$Count <- FF16.re$Count + FF15.re$Count
 
+######## Week 17 #########
+FF17 <- Frcd.Fumb.Peop %>% 
+  filter(week == 17)
+
+FF16.Copy <- FF16.re
+FF16.Copy$week <- 17 
+
+FF17.re <- left_join(data.frame("week" = 17,
+                                "Name" = unique(Frcd.Fumb.Peop$Name)), FF17)
+FF17.re[is.na(FF17.re)] <- 0
+
+FF17.re$Count <- FF17.re$Count + FF17.re$Count
+
 DF.Final.Anime <- do.call("rbind", list(FF0.re, FF1.re, FF2.re, FF3.re, FF4.re, FF5.re,
                                         FF6.re, FF7.re, FF8.re, FF9.re, FF10.re,
-                                        FF11.re, FF12.re, FF13.re, FF14.re, FF15.re, FF16.re))
+                                        FF11.re, FF12.re, FF13.re, FF14.re, FF15.re, FF16.re, FF17.re))
 
 ##### write good data #####
 write.csv(DF.Final.Anime, "Derived_Data/Final.Anime.csv")
@@ -316,5 +329,5 @@ anim <- DF.Final.Anime %>%
   exit_fade()
 
 
-animate(anim, 320, fps = 20,  width = 1200, height = 1000, 
+animate(anim, 340, fps = 20,  width = 1200, height = 1000, 
         renderer = gifski_renderer("README_Grpahics/Forced.Fumbles.2020.gif"))
