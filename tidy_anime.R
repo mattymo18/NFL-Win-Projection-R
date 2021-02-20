@@ -271,7 +271,7 @@ FF17.re <- left_join(data.frame("week" = 17,
                                 "Name" = unique(Frcd.Fumb.Peop$Name)), FF17)
 FF17.re[is.na(FF17.re)] <- 0
 
-FF17.re$Count <- FF17.re$Count + FF17.re$Count
+FF17.re$Count <- FF17.re$Count + FF16.re$Count
 
 DF.Final.Anime <- do.call("rbind", list(FF0.re, FF1.re, FF2.re, FF3.re, FF4.re, FF5.re,
                                         FF6.re, FF7.re, FF8.re, FF9.re, FF10.re,
@@ -292,7 +292,7 @@ anim <- DF.Final.Anime %>%
   arrange(desc(Count), prev.count) %>% 
   mutate(x = seq(1, n())) %>% 
   ungroup() %>% 
-  filter(week <= 16) %>% 
+  filter(week <= 17) %>% 
   ggplot(aes(x = x, y = Count, fill = Name, color = Name)) +
   geom_tile(aes(y = Count/2, 
                 height = Count, 
