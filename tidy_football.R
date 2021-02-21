@@ -33,14 +33,15 @@ reg.szn.pbp20 <- pbp20 %>%
 
 ## Variable Selection ##
 reg.szn.clean.cols.15_19 <- reg.szn.pbp15_19 %>% 
+  separate(game_date, sep = "-", into = c("Year.Date", "Month.Date", "Day.Date")) %>% 
   select(
     #first we want the game situation
-    game_id, home_team, away_team, season_type, posteam, defteam, game_seconds_remaining, 
-    half_seconds_remaining, quarter_seconds_remaining, home_timeouts_remaining, 
+    game_id, week, Year.Date, Month.Date, Day.Date, home_team, away_team, season_type, posteam, defteam, 
+    game_seconds_remaining, half_seconds_remaining, quarter_seconds_remaining, home_timeouts_remaining, 
     away_timeouts_remaining, yrdln, ydstogo, total_home_score, total_away_score, 
     #then we want a description of the play (will take out desc eventually)
     timeout, shotgun, no_huddle, qb_dropback, qb_kneel, qb_spike, qb_scramble,
-    qb_hit, yards_gained, desc,
+    qb_hit, yards_gained, desc, touchdown, pass_touchdown, rush_touchdown,
     #we also want to know what type of play it was
     rush_attempt, pass_attempt, play_type, 
     #pass plays
@@ -69,14 +70,15 @@ reg.szn.clean.cols.15_19 <- reg.szn.pbp15_19 %>%
   )
 
 reg.szn.clean.cols.20 <- reg.szn.pbp20 %>% 
+  separate(game_date, sep = "-", into = c("Year.Date", "Month.Date", "Day.Date")) %>% 
   select(
   #first we want the game situation
-  game_id, home_team, away_team, season_type, posteam, defteam, game_seconds_remaining, 
-  half_seconds_remaining, quarter_seconds_remaining, home_timeouts_remaining, 
-  away_timeouts_remaining, yrdln, ydstogo, total_home_score, total_away_score, 
+  game_id, week, Year.Date, Month.Date, Day.Date, home_team, away_team, season_type, posteam, defteam, 
+  game_seconds_remaining, half_seconds_remaining, quarter_seconds_remaining, home_timeouts_remaining, 
+  away_timeouts_remaining, yrdln, ydstogo, total_home_score, total_away_score,
   #then we want a description of the play (will take out desc eventually)
   timeout, shotgun, no_huddle, qb_dropback, qb_kneel, qb_spike, qb_scramble,
-  qb_hit, yards_gained, desc,
+  qb_hit, yards_gained, desc, touchdown, pass_touchdown, rush_touchdown, 
   #we also want to know what type of play it was
   rush_attempt, pass_attempt, play_type, 
   #pass plays
@@ -104,5 +106,5 @@ reg.szn.clean.cols.20 <- reg.szn.pbp20 %>%
   result, total, spread_line, total_line
 )
 
-df <- rbind(reg.szn.clean.cols.15_19[, complete.cases()], complete,cases(reg.szn.clean.cols.20))
+df <- rbind(reg.szn.clean.cols.15_19, reg.szn.clean.cols.20)
 write.csv(df, "Derived_Data/NFL.Clean.Cols.csv")
