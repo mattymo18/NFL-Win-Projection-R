@@ -2,6 +2,10 @@
 
 clean: 
 	rm Derived_Data/*.csv
+	rm Derived_Graphics/*.png
+	rm Derived_Graphics/*.gif
+	rm README_Graphics/*.png
+	rm README_Graphics/*.png
 	
 Derived_Data/NFL.Clean.Cols.csv:\
  tidy_football.R
