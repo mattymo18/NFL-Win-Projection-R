@@ -50,7 +50,7 @@ set.seed(18)
 ### PAM ###
 g1 <- autoplot(pam(team.ident[, -1], 4), frame = T, fram.type = 'norm') +
   geom_image(aes(image = team.ident.logo$team_logo_espn), size = .05) +
-  labs(title = "PAM Clustering Team Identities (2018-2020)", 
+  labs(title = "PAM Cluster Team Identities (2018-2020)", 
        caption = "Data Source: nflfastR") +
   theme(axis.text.x = element_blank(),
         axis.text.y = element_blank(),
@@ -64,7 +64,7 @@ ggsave("README_Graphics/PAM.Cluster.Logos.png", plot = g1)
 km.res <- kmeans(scale(team.ident[, -1]), 5, nstart = 25)
 g2 <- fviz_cluster(km.res, data = team.ident[ ,-1], geom = c("point")) +
   geom_image(aes(image = team.ident.logo$team_logo_espn), size = .07) +
-  labs(title = "K-Means Clustering Team Identities (2018-2020)", 
+  labs(title = "K-Means Cluster Team Identities (2018-2020)", 
        caption = "Data Source: nflfastR") +
   theme(axis.text.x = element_blank(),
         axis.text.y = element_blank(),
