@@ -40,5 +40,5 @@ Introductory Plots
 
 ![](README_Graphics/Forced.Fumbles.2020.gif)
 
-![](README_Graphics/PAM.Cluster.Logos.pn
+![](README_Graphics/PAM.Cluster.Logos.png)
 
