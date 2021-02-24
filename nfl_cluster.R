@@ -5,6 +5,7 @@ library(cluster)
 library(Rtsne)
 library(nflfastR)
 library(ggimage)
+library(factoextra)
 reg.szn <- read_csv("Derived_Data/NFL.Clean.Cols.csv")
 
 ##### clean up a bit and summarize to get team identities #####
@@ -45,9 +46,11 @@ team.ident.logo <- left_join(team.ident %>%
 ##### clustering #####
 
 set.seed(18)
-g4 <- autoplot(pam(team.ident[, -1], 4), frame = T, fram.type = 'norm') +
+
+### PAM ###
+g1 <- autoplot(pam(team.ident[, -1], 4), frame = T, fram.type = 'norm') +
   geom_image(aes(image = team.ident.logo$team_logo_espn), size = .05) +
-  labs(title = "PAM Clustering Team Identities", 
+  labs(title = "PAM Clustering Team Identities (2018-2020)", 
        caption = "Data Source: nflfastR") +
   theme(axis.text.x = element_blank(),
         axis.text.y = element_blank(),
@@ -55,4 +58,19 @@ g4 <- autoplot(pam(team.ident[, -1], 4), frame = T, fram.type = 'norm') +
         plot.title = element_text(size=25, hjust=0.5, face="bold", colour="black", vjust=-1),
         plot.caption = element_text(size=12, hjust=0.5, face="italic", color="red"),
         plot.background = element_blank())
-ggsave("README_Graphics/PAM.Cluster.Logos.png")
+ggsave("README_Graphics/PAM.Cluster.Logos.png", plot = g1)
+
+### K-Means ###
+km.res <- kmeans(scale(team.ident[, -1]), 5, nstart = 25)
+g2 <- fviz_cluster(km.res, data = team.ident[ ,-1], geom = c("point")) +
+  geom_image(aes(image = team.ident.logo$team_logo_espn), size = .07) +
+  labs(title = "K-Means Clustering Team Identities (2018-2020)", 
+       caption = "Data Source: nflfastR") +
+  theme(axis.text.x = element_blank(),
+        axis.text.y = element_blank(),
+        legend.position = "none",
+        plot.title = element_text(size=25, hjust=0.5, face="bold", colour="black", vjust=-1),
+        plot.caption = element_text(size=12, hjust=0.5, face="italic", color="red"),
+        plot.background = element_blank(), 
+        plot.margin = margin(0, 1, 0, 1, unit = "cm"))
+ggsave("Derived_Graphics/K-Means.Clustering.Logos.png", plot = g2)

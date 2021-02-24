@@ -15,8 +15,10 @@ Derived_Data/Final.Anime.csv\
 README_Graphics/Forced.Fumbles.2020.gif:\
  tidy_anime.R
 	Rscript tidy_anime.R
-	
-README_Graphics/PAM.Cluster.Logos.png:\
+
+
+README_Graphics/PAM.Cluster.Logos.png\
+Derived_Graphics/K-Means.Clustering.Logos.png:\
  Derived_Data/NFL.Clean.Cols.csv\
  nfl_cluster.R
 	Rscript nfl_cluster.R
